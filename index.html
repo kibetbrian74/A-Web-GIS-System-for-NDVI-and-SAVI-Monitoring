@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web GIS System for NDVI & SAVI Monitoring</title>
+    <script src="https://earthengine-highvolume.googleapis.com/api/3b884d1e35c6b9d9ab6e7a296bd11491/ee_api_js.js"></script>
+    <script>
+      // Initialize Earth Engine
+      function initEarthEngine() {
+        ee.initialize(null, null, function() {
+          console.log('Earth Engine API initialized');
+        }, function(e) {
+          console.error('Earth Engine API initialization error', e);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
